@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Movies View - JavanVideo</title>
+        <link href="https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet">
+        <!-- Styles -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/jquery.nstSlider.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/responsive.css" rel="stylesheet">
+
+        <!-- JS Files -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.matchHeight-min.js"></script>
+        <script src="js/jquery.nstSlider.min.js"></script>
+        <script src="js/jquery.scrollToTop.min.js"></script>
+        <script src="js/main.js"></script>
+        
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body class="video_not_found">
+    <!-- 
+    add class on body for Video not found ".video_not_found",
+    add class on body for Trailer not found ".trailer_not_found",
+    add class on body for Page not found ".page_not_found",
+    add class on body for Loding not found ".loding_icon"
+    -->    
+       
+    <!-- Header Area -->
+    <div class="header_bar">
+        <!-- Header Left Logo -->
+        <div class="header_left">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <!-- Logo -->
+                        <a href="index.html" title="JavanVideo" class="javanvideo">JAVANVIDEO</a>
+                        <!-- Mobile Menu Button -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Header Left Logo -->
+        
+        <!-- Header Right -->
+        <div class="header_right">
+           <div class="container-fluid">
+               <div class="row">
+                   <!-- Search box -->
+                   <div class="col-sm-4 col-md-5">
+                       <div class="search_box">
+                            <form action="search-results.php">
+                                <input type="text" placeholder="Search here">
+                                <input type="submit" value="">
+                            </form>
+                        </div>
+                   </div>
+                   
+                   <!-- Main Menu -->
+                   <div class="col-sm-8 col-md-7">
+                        <div class="social_icon">
+                            <ul>
+                                <li><a href="#" title="Facebook"><img width="20" src="images/facebook.png" alt="Facebook"></a></li>
+                                <li><a href="#" title="Twitter"><img width="20" src="images/twitter.png" alt="Twitter"></a></li>
+                            </ul>
+                        </div>
+                        <div class="mainmenu_area">
+                            <div class="mainmenu navbar-collapse collapse">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li><a href="live-tv.html" title="Live TV">Live TV</a></li>
+                                    <li><a href="tv-shows.html" title="TV Shows">TV Shows</a></li>
+                                    <li><a href="movies.html" title="Movies">Movies</a></li>
+                                    <li><a href="series.html" title="Series">Series</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                   </div>
+                   
+                   
+               </div>
+           </div>
+        </div>
+        <!-- /Header Right -->
+    </div>
+    <!-- /Header Area -->
+    
+    
+    <!-- Top Big Poster -->
+    <div class="movie_big_poster">
+        <div class="big_poster">
+            <img src="images/now_you_see_mee.jpg" alt="">
+        </div>
+    </div>
+    <!-- /Top Big Poster -->
+    
+    <!-- Movie Details Area -->
+    <div class="movie_details_area">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="movie_details_info">
+                        <div class="row">
+                            <!-- Movie Poster Thumb -->
+                            <div class="col-sm-3 col-md-3 col-lg-2 padding_ten">
+                                <div class="single_movie_poster">
+                                    <img src="images/movie1.jpg" alt="">
+                                </div>
+                            </div>
+                            <!-- /Movie Poster Thumb -->
+                            
+                            <!-- Movie Details -->
+                            <div class="col-sm-9 col-md-9 col-lg-10 padding_ten">
+                                <!-- Title and Movie Type -->
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="movie_title_type">
+                                            <h2>Now You See Me 2</h2>
+                                            <p>Action, Adventure, Comedy</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Movie Information -->
+                                <div class="row">
+                                    <!-- Movie's Released -->
+                                    <div class="col-sm-3">
+                                        <div class="movies_info">
+                                            <ul>
+                                                <li>
+                                                    <img width="24" src="images/calender.png" alt="">
+                                                    <div class="release_date">
+                                                        <p>Released</p>
+                                                        <h4>June 10, 2016</h4>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <img width="20" src="images/clock.png" alt="">
+                                                    <div class="release_date">
+                                                        <p>Runtime</p>
+                                                        <h4>129 min</h4>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <img width="23" src="images/star.png" alt="">
+                                                    <div class="release_date has-rated">
+                                                        <p>IMDB Score</p>
+                                                        <h4 class="rated">6.6 <span>/10</span></h4>
+                                                        <h4 class="not_rated">N/A</h4>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- /Movie's Released -->
+                                    
+                                    <!-- Movie's Description -->
+                                    <div class="col-sm-6">
+                                        <div class="movie_des">
+                                            <p>You Haven't Seen Anything Yet.
+<br /><br />
+One year after outwitting the FBI and winning the public’s adulation with their mind-bending spectacles, the Four Horsemen resurface only to find themselves face to face with a new enemy who enlists them to pull off their most dangerous heist yet.</p>
+                                        </div>
+                                    </div>
+                                    <!-- /Movie's Description -->
+                                    
+                                    <!-- Movie's Link -->
+                                    <div class="col-sm-3">
+                                        <div class="movie_link">
+                                            <ul>
+                                                <li class="imbd_link"><a href="#" title="IMBD">IMDB <img width="13" src="images/imbd.png" alt=""></a></li>
+                                                <li class="trailer_link"><a href="#" title="Trailer">Trailer <img width="20" src="images/trailer.png" alt=""></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- Movie's Link -->
+                                    
+                                </div>
+                            </div>
+                            <!-- /Movie Details -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Movie Details Area -->
+    
+    <!-- Movie Player Area -->
+    <div class="movie_player_area">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1 padding_ten">
+                    <div class="video_or_alert">
+                        <div class="movie_player embed-responsive embed-responsive-16by9">
+                            
+                            <iframe class="display_video" src="https://player.vimeo.com/video/174417616?badge=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                           
+                            <!-- Alert Message -->
+                            <p class="video_not_found_text">Video is not found.</p>
+                            <p class="page_not_found_text">Page not found.</p>
+                            <p class="loding_icon_text">Loading icon.</p>
+                            <p class="trailer_not_found_text">Trailer not available.</p>
+                            <!-- /Alert Message -->
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Movie Player Area -->
+
+
+    </body>
+</html>
+
+
+

@@ -1,0 +1,236 @@
+@media only screen and (max-width: 1499px) {
+
+}
+/* Medium Layout: 1280px. */
+@media only screen and (min-width: 992px) and (max-width: 1200px) { 
+    .padding_left_zero { padding-left: 0 }
+    .mainmenu .navbar-nav a { margin: 0 12px }
+}
+/* Tablet Layout: 768px. */
+@media only screen and (min-width: 768px) and (max-width: 991px) { 
+    .mainmenu .navbar-nav a {
+        margin: 0 5px;
+    }
+    .submit_button input[type="submit"] { padding: 11px 20px }
+    .submit_button input[type="reset"] { padding: 8px 30px }
+    .padding_ten {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .release_date h4 { font-size: 13px }
+    /*
+    ul.movie_poster_lists li.single_movie_poster_list {
+      width: 30%;
+    }
+    */
+    .slider_title_tag h2 {
+      font-size: 28px;
+      line-height: 28px;
+      margin-top: 20px;
+    }
+  
+}
+/* Mobile Layout: 320px. */
+@media only screen and (max-width: 767px) {
+.header_bar {
+  position: relative;
+    overflow: visible;
+} 
+.content_area {
+  padding-top: 0;
+}
+    .slider_title_tag h2 {
+  font-size: 22px;
+  line-height: 22px;
+  margin-top: 22px;
+}
+    .copyright_text {
+  margin-bottom: 15px;
+  text-align: center;
+}
+    .aixsystem_logo {
+  text-align: center;
+}
+    .header_left {
+        width: 100%;
+        text-align: center;
+        position: fixed;
+        z-index: 99999;
+        height: inherit;
+        min-height: inherit;
+    }
+    .header_left a {
+        float: left;
+    }
+    .mainmenu > ul {
+        text-align: center;
+        width: 100%;
+    }
+    .header_right {
+        width: 100%;
+        padding-top: 46px;
+    }
+    .mainmenu { overflow: inherit }
+    .mainmenu li {
+        display: inline;
+        float: none;
+        background: #1f2932 none repeat scroll 0 0;
+    }
+    .mainmenu.navbar-collapse.in { overflow-y: inherit }
+    .mainmenu.navbar-collapse {
+        background: #1f2932 none repeat scroll 0 0;
+        left: 0;
+        position: fixed;
+        width: 100%;
+        z-index: 999999;
+        top: 60px;
+    }
+    .mainmenu.navbar-collapse { padding: 0 }
+    .mainmenu.navbar-collapse li {
+        border-bottom: 1px solid #c8d0d9;
+        display: block;
+    }
+    .mainmenu.navbar-collapse li a,
+    .mainmenu.navbar-collapse li a:active,
+    .mainmenu.navbar-collapse li a:focus {
+        border-bottom: 2px solid transparent;
+        display: block;
+        margin: 0;
+        padding: 10px 15px;
+        text-align: left;
+        background: transparent;
+    }
+    .mainmenu.navbar-collapse li.active { border-bottom: 2px solid #F35C50 }
+    .mainmenu.navbar-collapse li:last-chield { border: none }
+    .mainmenu a {
+        margin: 0 10px;
+        padding: 10px 0;
+    }
+    .social_icon {
+        float: left;
+        width: 100%;
+    }
+    .social_icon > ul {
+        float: none;
+        margin: 0;
+        overflow: hidden;
+        padding: 30px 0 15px;
+        text-align: center;
+    }
+    .social_icon li {
+        display: inline;
+        float: none;
+    }
+.content_left {
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+}
+    .content_right { width: 100% }
+    .content_height.filter_area_div {
+        height: inherit !important;
+        padding: 30px 15px 130px;
+        position: relative;
+    }
+    .go_to_top a { bottom: 20px }
+    .img-responsive { width: 100% }
+    .navbar-header .navbar-toggle { border: 1px solid #fff;margin-top:13px; margin-bottom:13px; margin-right:0px; }
+    .navbar-toggle .icon-bar { background: #fff none repeat scroll 0 0 }
+    .release_date h4 { font-size: 13px }
+    .movies_info img { margin-right: 5px }
+    .movie_link ul { text-align: center }
+    .movie_link li {
+        display: inline;
+        width: inherit;
+    }
+    .movie_link a {
+        display: inline-block;
+        float: none;
+        margin: 0 10px;
+    }
+    .movie_details_info {
+        margin-bottom: 30px;
+        margin-top: 20px;
+    }
+    .movie_title_type {
+        margin-bottom: 0;
+        text-align: center;
+    }
+    .movie_title_type h2 {
+        color: #182028;
+        margin-top: 10px;
+    }
+    .movie_title_type p { color: #182028 }
+    .movie_player_area { margin-bottom: 50px }
+    .single_movie_poster { text-align: center }
+    .movies_info ul { text-align: center }
+    .movies_info li {
+        display: inline-block;
+        margin: 0 10px;
+    }
+    .movies_info {
+        margin-bottom: 40px;
+        margin-top: 40px;
+    }
+    .movie_des { text-align: center }
+    .single_episod img { width: 100% }
+    .padding_ten {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .movie_big_poster {
+      padding-top: 0;
+    }
+    /*
+    ul.movie_poster_lists li.single_movie_poster_list {
+      width: 45%;
+    }
+    */
+    
+    .error_page_tablecell {
+  padding-top: 0;
+}
+    .four_zero_four h1 {
+display: inline-block;
+font-size: 120px;
+line-height: 120px;
+}
+    .four_zero_four h1.first_letter {
+left: 0;
+margin-left: 0;
+position: relative;
+top: 0;
+}
+    .four_zero_four h1.third_letter {
+height: inherit;
+transform: none;
+width: inherit;
+}
+    
+    .error_page_contet {
+padding: 50px 15px;
+text-align: center;
+}
+    .error_message h2 {
+font-size: 25px;
+line-height: 25px;
+margin-bottom: 15px;
+margin-top: 0;
+padding-left: 0;
+}
+    .error_message p {
+font-size: 15px;
+line-height: 15px;
+        padding-left: 0
+}
+    
+}
+/* Wide Mobile Layout: 480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) { 
+    /*
+    ul.movie_poster_lists li.single_movie_poster_list {
+      width: 30%;
+    }
+    */
+}
+

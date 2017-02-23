@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Movies List - JavanVideo</title>
+        <!-- ===== Fonts ===== -->
+        <link href="https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet">
+        <!-- ======= Styles ======= -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/jquery.nstSlider.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/responsive.css" rel="stylesheet">
+
+        <!-- ====== JS Files ======-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.matchHeight-min.js"></script>
+        <script src="js/jquery.nstSlider.min.js"></script>
+        <script src="js/jquery.scrollToTop.min.js"></script>
+        <script src="js/main.js"></script>
+        
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        
+    
+    
+    <!-- Header Area -->
+    <div class="header_bar">
+        <!-- Header Left Logo -->
+        <div class="header_left">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <!-- Logo -->
+                        <a href="index.html" title="JavanVideo" class="javanvideo">JAVANVIDEO</a>
+                        <!-- Mobile Menu Button -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Header Left Logo -->
+        
+        <!-- Header Right -->
+        <div class="header_right">
+           <div class="container-fluid">
+               <div class="row">
+                   <!-- Search box -->
+                   <div class="col-sm-4 col-md-5">
+                       <div class="search_box">
+                            <form action="search-results.php">
+                                <input type="text" placeholder="Search here">
+                                <input type="submit" value="">
+                            </form>
+                        </div>
+                   </div>
+                   
+                   <!-- Main Menu -->
+                   <div class="col-sm-8 col-md-7">
+                        <div class="social_icon">
+                            <ul>
+                                <li><a href="#" title="Facebook"><img width="20" src="images/facebook.png" alt="Facebook"></a></li>
+                                <li><a href="#" title="Twitter"><img width="20" src="images/twitter.png" alt="Twitter"></a></li>
+                            </ul>
+                        </div>
+                        <div class="mainmenu_area">
+                            <div class="mainmenu navbar-collapse collapse">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li><a href="live-tv.html" title="Live TV">Live TV</a></li>
+                                    <li><a href="tv-shows.html" title="TV Shows">TV Shows</a></li>
+                                    <li class="active"><a href="movies.html" title="Movies">Movies</a></li>
+                                    <li><a href="series.html" title="Series">Series</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                   </div>
+                   
+               </div>
+           </div>
+        </div>
+        <!-- /Header Right -->
+    </div>
+    <!-- /Header Area -->
+    
+    
+    <!-- Content Area -->
+    <div class="content_area">
+        <!-- Left Side Movies List -->
+        <div class="content_left">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 content_height">
+                        <div class="movies_list">
+                           
+                            <div class="row">
+                                <div class="col-xs-8 single_item">
+                                    <div class="page_title">
+                                        <h2>Movies</h2>
+                                        <p>The popcorns are ready? Just left choose your movie</p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4 single_item">
+                                    <div class="sort_by alignright">
+                                        <select name="sortby_list" id="sortby_list">
+                                            <option value="null" disabled selected>Sort</option>
+                                            <option value="1">Name (A-Z)</option>
+                                            <option value="2">Name (Z-A)</option>
+                                            <option value="3">Date Added</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Movies List -->
+                            <div class="row">
+                                <!-- Single Movie -->
+                                <div class="col-lg-2 col-sm-4 col-md-3 col-xs-6 single_item">
+                                    <div class="single_movie">
+                                        <a href="movies-view.html" title="Now You See Me 2">
+                                            <div class="movie_image">
+                                                <img class="img-responsive" src="images/movie1.jpg" alt="Movie Poster">
+                                                <div class="hover_display"><img alt="" src="images/hover-icon.png"></div>
+                                            </div>
+                                            <div class="year_rating">
+                                                <h5 class="year">2016</h5>
+                                                <h4 class="rating">
+                                                    <span><img width="10" src="images/rating.png" alt="Rating"></span> 6,6
+                                                </h4>
+                                            </div>
+                                            <div class="title_type">
+                                                <h3>Now You See Me 2</h3>
+                                                <p>Action, Adventure, Comedy</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- /Single Movie -->
+
+                                <!-- Single Movie -->
+                                <div class="col-lg-2 col-sm-4 col-md-3 col-xs-6 single_item">
+                                    <div class="single_movie">
+                                        <a href="#" title="The Nice Guys">
+                                           <div class="movie_image">
+                                                <img class="img-responsive" src="images/movie2.jpg" alt="Movie Poster">
+                                                <div class="hover_display"><img alt="" src="images/hover-icon.png"></div>
+                                            </div>
+                                            <div class="quality">
+                                                <h4>HD</h4>
+                                            </div>
+                                            <div class="year_rating">
+                                                <h5 class="year">2016</h5>
+                                                <h4 class="rating">
+                                                    <span><img width="10" src="images/rating.png" alt="Rating"></span> 6,6
+                                                </h4>
+                                            </div>
+                                            <div class="title_type">
+                                                <h3>The Nice Guys</h3>
+                                                <p>Action, Comedy, Crime</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- /Single Movie -->
+
+                               <!-- Single Movie -->
+                                <div class="col-lg-2 col-sm-4 col-md-3 col-xs-6 single_item">
+                                    <div class="single_movie">
+                                        <a href="#" title="Money Monster">
+                                           <div class="movie_image">
+                                                <img class="img-responsive" src="images/movie3.jpg" alt="Movie Poster">
+                                                <div class="hover_display"><img alt="" src="images/hover-icon.png"></div>
+                                            </div>
+                                            <div class="quality">
+                                                <h4>HD</h4>
+                                            </div>
+                                            <div class="year_rating">
+                                                <h5 class="year">2016</h5>
+                                                <h4 class="rating">
+                                                    <span><img width="10" src="images/rating.png" alt="Rating"></span> 6,6
+                                                </h4>
+                                            </div>
+                                            <div class="title_type">
+                                                <h3>Money Monster</h3>
+                                                <p>Crime, Drama, Thriller</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- /Single Movie -->
+
+                               <!-- Single Movie -->
+                                <div class="col-lg-2 col-sm-4 col-md-3 col-xs-6 single_item">
+                                    <div class="single_movie">
+                                        <a href="#" title="Star Wars: Episode VII - The Force Awakens">
+                                           <div class="movie_image">
+                                                <img class="img-responsive" src="images/movie4.jpg" alt="Movie Poster">
+                                                <div class="hover_display"><img alt="" src="images/hover-icon.png"></div>
+                                            </div>
+                                            <div class="year_rating">
+                                                <h5 class="year">2016</h5>
+                                                <h4 class="rating">
+                                                    <span><img width="10" src="images/rating.png" alt="Rating"></span> 6,6
+                                                </h4>
+                                            </div>
+                                            <div class="title_type">
+                                                <h3>Star Wars: Episode VII - The Force Awakens</h3>
+                                                <p>Action, Adventure, Fantasy</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- /Single Movie -->
+
+                               <!-- Single Movie -->
+                                <div class="col-lg-2 col-sm-4 col-md-3 col-xs-6 single_item">
+                                    <div class="single_movie">
+                                        <a href="#">
+                                           <div class="movie_image">
+                                                <img class="img-responsive" src="images/movie5.jpg" alt="Movie Poster">
+                                                <div class="hover_display"><img alt="" src="images/hover-icon.png"></div>
+                                            </div>
+                                            <div class="year_rating">
+                                                <h5 class="year">2016</h5>
+                                                <h4 class="rating">
+                                                    <span><img width="10" src="images/rating.png" alt="Rating"></span> 6,6
+                                                </h4>
+                                            </div>
+                                            <div class="title_type">
+                                                <h3>Pulp Fiction</h3>
+                                                <p>Crime, Drama</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- /Single Movie -->
+
+                               <!-- Single Movie -->
+                                <div class="col-lg-2 col-sm-4 col-md-3 col-xs-6 single_item">
+                                    <div class="single_movie">
+                                        <a href="#">
+                                           <div class="movie_image">
+                                                <img class="img-responsive" src="images/movie6.jpg" alt="Movie Poster">
+                                                <div class="hover_display"><img alt="" src="images/hover-icon.png"></div>
+                                            </div>
+                                            <div class="quality">
+                                                <h4>HD</h4>
+                                            </div>
+                                            <div class="year_rating">
+                                                <h5 class="year">2016</h5>
+                                                <h4 class="rating">
+                                                    <span><img width="10" src="images/rating.png" alt="Rating"></span> 6,6
+                                                </h4>
+                                            </div>
+                                            <div class="title_type">
+                                                <h3>Deadpool</h3>
+                                                <p>Action, Adventure, Comedy</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- /Single Movie -->
+
+                               <!-- Single Movie -->
+                                <div class="col-lg-2 col-sm-4 col-md-3 col-xs-6 single_item">
+                                    <div class="single_movie">
+                                        <a href="#">
+                                           <div class="movie_image">
+                                                <img class="img-responsive" src="images/movie7.jpg" alt="Movie Poster">
+                                                <div class="hover_display"><img alt="" src="images/hover-icon.png"></div>
+                                            </div>
+                                            <div class="quality">
+                                                <h4>HD</h4>
+                                            </div>
+                                            <div class="year_rating">
+                                                <h5 class="year">2016</h5>
+                                                <h4 class="rating">
+                                                    <span><img width="10" src="images/rating.png" alt="Rating"></span> 6,6
+                                                </h4>
+                                            </div>
+                                            <div class="title_type">
+                                                <h3>Vacation</h3>
+                                                <p>Adventure, Comedy, Family</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- /Single Movie -->
+
+                               <!-- Single Movie -->
+                                <div class="col-lg-2 col-sm-4 col-md-3 col-xs-6 single_item">
+                                    <div class="single_movie">
+                                        <a href="#">
+                                           <div class="movie_image">
+                                                <img class="img-responsive" src="images/movie8.jpg" alt="Movie Poster">
+                                                <div class="hover_display"><img alt="" src="images/hover-icon.png"></div>
+                                            </div>
+                                            <div class="year_rating">
+                                                <h5 class="year">2016</h5>
+                                                <h4 class="rating">
+                                                    <span><img width="10" src="images/rating.png" alt="Rating"></span> 6,6
+                                                </h4>
+                                            </div>
+                                            <div class="title_type">
+                                                <h3>The Intern</h3>
+                                                <p>Comedy, Drama</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- /Single Movie -->
+
+                               <!-- Single Movie -->
+                                <div class="col-lg-2 col-sm-4 col-md-3 col-xs-6 single_item">
+                                    <div class="single_movie">
+                                        <a href="#">
+                                           <div class="movie_image">
+                                                <img class="img-responsive" src="images/movie9.jpg" alt="Movie Poster">
+                                                <div class="hover_display"><img alt="" src="images/hover-icon.png"></div>
+                                            </div>
+                                            <div class="quality">
+                                                <h4>HD</h4>
+                                            </div>
+                                            <div class="year_rating">
+                                                <h5 class="year">2016</h5>
+                                                <h4 class="rating">
+                                                    <span><img width="10" src="images/rating.png" alt="Rating"></span> 6,6
+                                                </h4>
+                                            </div>
+                                            <div class="title_type">
+                                                <h3>The Transporter Refueled</h3>
+                                                <p>Action, Crime, Thriller</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- /Single Movie -->
+
+                               <!-- Single Movie -->
+                                <div class="col-lg-2 col-sm-4 col-md-3 col-xs-6 single_item">
+                                    <div class="single_movie">
+                                        <a href="#">
+                                           <div class="movie_image">
+                                                <img class="img-responsive" src="images/movie10.jpg" alt="Movie Poster">
+                                                <div class="hover_display"><img alt="" src="images/hover-icon.png"></div>
+                                            </div>
+                                            <div class="quality">
+                                                <h4>HD</h4>
+                                            </div>
+                                            <div class="year_rating">
+                                                <h5 class="year">2016</h5>
+                                                <h4 class="rating">
+                                                    <span><img width="10" src="images/rating.png" alt="Rating"></span> 6,6
+                                                </h4>
+                                            </div>
+                                            <div class="title_type">
+                                                <h3>The Martian</h3>
+                                                <p>Adventure, Drama, Sci-Fi</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- /Single Movie -->
+
+                               <!-- Single Movie -->
+                                <div class="col-lg-2 col-sm-4 col-md-3 col-xs-6 single_item">
+                                    <div class="single_movie">
+                                        <a href="#">
+                                           <div class="movie_image">
+                                                <img class="img-responsive" src="images/movie11.jpg" alt="Movie Poster">
+                                                <div class="hover_display"><img alt="" src="images/hover-icon.png"></div>
+                                            </div>
+                                            <div class="quality">
+                                                <h4>HD</h4>
+                                            </div>
+                                            <div class="year_rating">
+                                                <h5 class="year">2016</h5>
+                                                <h4 class="rating">
+                                                    <span><img width="10" src="images/rating.png" alt="Rating"></span> 6,6
+                                                </h4>
+                                            </div>
+                                            <div class="title_type">
+                                                <h3>Spectre</h3>
+                                                <p>Action, Adventure, Thriller</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- /Single Movie -->
+
+                               <!-- Single Movie -->
+                                <div class="col-lg-2 col-sm-4 col-md-3 col-xs-6 single_item">
+                                    <div class="single_movie">
+                                        <a href="#">
+                                           <div class="movie_image">
+                                                <img class="img-responsive" src="images/movie12.jpg" alt="Movie Poster">
+                                                <div class="hover_display"><img alt="" src="images/hover-icon.png"></div>
+                                            </div>
+                                            <div class="quality">
+                                                <h4>HD</h4>
+                                            </div>
+                                            <div class="year_rating">
+                                                <h5 class="year">2016</h5>
+                                                <h4 class="rating">
+                                                    <span><img width="10" src="images/rating.png" alt="Rating"></span> 6,6
+                                                </h4>
+                                            </div>
+                                            <div class="title_type">
+                                                <h3>The Walk</h3>
+                                                <p>Aventure, Biography, Drama</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- /Single Movie -->
+
+                               <!-- Single Movie -->
+                                <div class="col-lg-2 col-sm-4 col-md-3 col-xs-6 single_item">
+                                    <div class="single_movie">
+                                        <a href="#">
+                                           <div class="movie_image">
+                                                <img class="img-responsive" src="images/movie1.jpg" alt="Movie Poster">
+                                                <div class="hover_display"><img alt="" src="images/hover-icon.png"></div>
+                                            </div>
+                                            <div class="year_rating">
+                                                <h5 class="year">2016</h5>
+                                                <h4 class="rating">
+                                                    <span><img width="10" src="images/rating.png" alt="Rating"></span> 6,6
+                                                </h4>
+                                            </div>
+                                            <div class="title_type">
+                                                <h3>Now You See Me 2</h3>
+                                                <p>Action, Adventure, Comedy</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- /Single Movie -->
+
+                               <!-- Single Movie -->
+                                <div class="col-lg-2 col-sm-4 col-md-3 col-xs-6 single_item">
+                                    <div class="single_movie">
+                                        <a href="#">
+                                           <div class="movie_image">
+                                                <img class="img-responsive" src="images/movie2.jpg" alt="Movie Poster">
+                                                <div class="hover_display"><img alt="" src="images/hover-icon.png"></div>
+                                            </div>
+                                            <div class="quality">
+                                                <h4>HD</h4>
+                                            </div>
+                                            <div class="year_rating">
+                                                <h5 class="year">2016</h5>
+                                                <h4 class="rating">
+                                                    <span><img width="10" src="images/rating.png" alt="Rating"></span> 6,6
+                                                </h4>
+                                            </div>
+                                            <div class="title_type">
+                                                <h3>The Nice Guys</h3>
+                                                <p>Action, Comedy, Crime</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- /Single Movie -->
+
+                               <!-- Single Movie -->
+                                <div class="col-lg-2 col-sm-4 col-md-3 col-xs-6 single_item">
+                                    <div class="single_movie">
+                                        <a href="#">
+                                           <div class="movie_image">
+                                                <img class="img-responsive" src="images/movie3.jpg" alt="Movie Poster">
+                                                <div class="hover_display"><img alt="" src="images/hover-icon.png"></div>
+                                            </div>
+                                            <div class="quality">
+                                                <h4>HD</h4>
+                                            </div>
+                                            <div class="year_rating">
+                                                <h5 class="year">2016</h5>
+                                                <h4 class="rating">
+                                                    <span><img width="10" src="images/rating.png" alt="Rating"></span> 6,6
+                                                </h4>
+                                            </div>
+                                            <div class="title_type">
+                                                <h3>Money Monster</h3>
+                                                <p>Crime, Drama, Thriller</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- /Single Movie -->
+
+                               <!-- Single Movie -->
+                                <div class="col-lg-2 col-sm-4 col-md-3 col-xs-6 single_item">
+                                    <div class="single_movie">
+                                        <a href="#">
+                                           <div class="movie_image">
+                                                <img class="img-responsive" src="images/movie4.jpg" alt="Movie Poster">
+                                                <div class="hover_display"><img alt="" src="images/hover-icon.png"></div>
+                                            </div>
+                                            <div class="year_rating">
+                                                <h5 class="year">2016</h5>
+                                                <h4 class="rating">
+                                                    <span><img width="10" src="images/rating.png" alt="Rating"></span> 6,6
+                                                </h4>
+                                            </div>
+                                            <div class="title_type">
+                                                <h3>Star Wars: Episode VII - The Force Awakens</h3>
+                                                <p>Action, Adventure, Fantasy</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- /Single Movie -->
+
+                               <!-- Single Movie -->
+                                <div class="col-lg-2 col-sm-4 col-md-3 col-xs-6 single_item">
+                                    <div class="single_movie">
+                                        <a href="#">
+                                           <div class="movie_image">
+                                                <img class="img-responsive" src="images/movie5.jpg" alt="Movie Poster">
+                                                <div class="hover_display"><img alt="" src="images/hover-icon.png"></div>
+                                            </div>
+                                            <div class="year_rating">
+                                                <h5 class="year">2016</h5>
+                                                <h4 class="rating">
+                                                    <span><img width="10" src="images/rating.png" alt="Rating"></span> 6,6
+                                                </h4>
+                                            </div>
+                                            <div class="title_type">
+                                                <h3>Pulp Fiction</h3>
+                                                <p>Crime, Drama</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- /Single Movie -->
+
+                               <!-- Single Movie -->
+                                <div class="col-lg-2 col-sm-4 col-md-3 col-xs-6 single_item">
+                                    <div class="single_movie">
+                                        <a href="#">
+                                           <div class="movie_image">
+                                                <img class="img-responsive" src="images/movie6.jpg" alt="Movie Poster">
+                                                <div class="hover_display"><img alt="" src="images/hover-icon.png"></div>
+                                            </div>
+                                            <div class="quality">
+                                                <h4>HD</h4>
+                                            </div>
+                                            <div class="year_rating">
+                                                <h5 class="year">2016</h5>
+                                                <h4 class="rating">
+                                                    <span><img width="10" src="images/rating.png" alt="Rating"></span> 6,6
+                                                </h4>
+                                            </div>
+                                            <div class="title_type">
+                                                <h3>Deadpool</h3>
+                                                <p>Action, Adventure, Comedy</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- /Single Movie -->
+
+                               <!-- Single Movie -->
+                                <div class="col-lg-2 col-sm-4 col-md-3 col-xs-6 single_item">
+                                    <div class="single_movie">
+                                        <a href="#">
+                                           <div class="movie_image">
+                                                <img class="img-responsive" src="images/movie7.jpg" alt="Movie Poster">
+                                                <div class="hover_display"><img alt="" src="images/hover-icon.png"></div>
+                                            </div>
+                                            <div class="quality">
+                                                <h4>HD</h4>
+                                            </div>
+                                            <div class="year_rating">
+                                                <h5 class="year">2016</h5>
+                                                <h4 class="rating">
+                                                    <span><img width="10" src="images/rating.png" alt="Rating"></span> 6,6
+                                                </h4>
+                                            </div>
+                                            <div class="title_type">
+                                                <h3>Vacation</h3>
+                                                <p>Adventure, Comedy, Family</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- /Single Movie -->
+
+                               <!-- Single Movie -->
+                                <div class="col-lg-2 col-sm-4 col-md-3 col-xs-6 single_item">
+                                    <div class="single_movie">
+                                        <a href="#">
+                                           <div class="movie_image">
+                                                <img class="img-responsive" src="images/movie8.jpg" alt="Movie Poster">
+                                                <div class="hover_display"><img alt="" src="images/hover-icon.png"></div>
+                                            </div>
+                                            <div class="year_rating">
+                                                <h5 class="year">2016</h5>
+                                                <h4 class="rating">
+                                                    <span><img width="10" src="images/rating.png" alt="Rating"></span> 6,6
+                                                </h4>
+                                            </div>
+                                            <div class="title_type">
+                                                <h3>The Intern</h3>
+                                                <p>Comedy, Drama</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- /Single Movie -->
+                                
+                            </div>
+                            <!-- /Movies List -->
+
+                            <!-- Pagination Area -->
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="pagination_area">
+                                        <div class="pagination_number">
+                                            <ul class="pagination">
+                                                <li class="previous disabled">
+                                                   <a href="#">
+                                                       <span class="glyphicon glyphicon-triangle-left" aria-hidden="true"></span> Previous
+                                                    </a>                                    
+                                                </li>
+                                                <li class="active"><a href="#">1</a></li>
+                                                <li><a href="#">2</a></li>
+                                                <li><a href="#">3</a></li>
+                                                <li><a href="#">4</a></li>
+                                                <li><a href="#">...</a></li>
+                                                <li><a href="#">174</a></li>
+                                                <li class="next">
+                                                   <a href="#">Next <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /Pagination Area -->
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Left Side Movies List -->
+        
+        
+        <!-- Right Side Filters -->
+        <div class="content_right content_height filter_area_div">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="filter_area">
+                            <div class="filter_title">
+                                <h2>Filters</h2>
+                                <p>3466 Results</p>
+                            </div>
+                            
+                            
+                            <div class="apply_filter">
+                                <!-- Star Filters Form -->
+                                <form action="filters.php">
+                                    <p>Genres</p>
+                                    <!-- Checkbox Section -->
+                                    <div class="checkbox_section">
+                                        <!-- Single Checkbox -->
+                                        <div class="form-group">
+                                            <div class="grey-checkbox">
+                                                <label>
+                                                    <input type="checkbox">
+                                                    <span class="box"></span>
+                                                    <span class="text">Action</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <!-- Single Checkbox -->
+                                        <div class="form-group">
+                                            <div class="grey-checkbox">
+                                                <label>
+                                                    <input type="checkbox">
+                                                    <span class="box"></span>
+                                                    <span class="text">Adult</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <!-- Single Checkbox -->
+                                        <div class="form-group">
+                                            <div class="grey-checkbox">
+                                                <label>
+                                                    <input type="checkbox">
+                                                    <span class="box"></span>
+                                                    <span class="text">Adventure</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <!-- Single Checkbox -->
+                                        <div class="form-group">
+                                            <div class="grey-checkbox">
+                                                <label>
+                                                    <input type="checkbox">
+                                                    <span class="box"></span>
+                                                    <span class="text">Animation</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <!-- Single Checkbox -->
+                                        <div class="form-group">
+                                            <div class="grey-checkbox">
+                                                <label>
+                                                    <input type="checkbox">
+                                                    <span class="box"></span>
+                                                    <span class="text">Biography</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <!-- Single Checkbox -->
+                                        <div class="form-group">
+                                            <div class="grey-checkbox">
+                                                <label>
+                                                    <input type="checkbox">
+                                                    <span class="box"></span>
+                                                    <span class="text">Comedy</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <!-- Single Checkbox -->
+                                        <div class="form-group">
+                                            <div class="grey-checkbox">
+                                                <label>
+                                                    <input type="checkbox">
+                                                    <span class="box"></span>
+                                                    <span class="text">Crime</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <!-- Single Checkbox -->
+                                        <div class="form-group">
+                                            <div class="grey-checkbox">
+                                                <label>
+                                                    <input type="checkbox">
+                                                    <span class="box"></span>
+                                                    <span class="text">Documentary</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <!-- Single Checkbox -->
+                                        <div class="form-group">
+                                            <div class="grey-checkbox">
+                                                <label>
+                                                    <input type="checkbox">
+                                                    <span class="box"></span>
+                                                    <span class="text">Drama</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="grey-checkbox">
+                                                <label>
+                                                    <input type="checkbox">
+                                                    <span class="box"></span>
+                                                    <span class="text">Family</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <!-- Single Checkbox -->
+                                        <div class="form-group">
+                                            <div class="grey-checkbox">
+                                                <label>
+                                                    <input type="checkbox">
+                                                    <span class="box"></span>
+                                                    <span class="text">Film-Noir</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <!-- Single Checkbox -->
+                                        <div class="form-group">
+                                            <div class="grey-checkbox">
+                                                <label>
+                                                    <input type="checkbox">
+                                                    <span class="box"></span>
+                                                    <span class="text">History</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <!-- Single Checkbox -->
+                                        <div class="form-group">
+                                            <div class="grey-checkbox">
+                                                <label>
+                                                    <input type="checkbox">
+                                                    <span class="box"></span>
+                                                    <span class="text">Horror</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <!-- Single Checkbox -->
+                                        <div class="form-group">
+                                            <div class="grey-checkbox">
+                                                <label>
+                                                    <input type="checkbox">
+                                                    <span class="box"></span>
+                                                    <span class="text">Music</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <!-- Single Checkbox -->
+                                        <div class="form-group">
+                                            <div class="grey-checkbox">
+                                                <label>
+                                                    <input type="checkbox">
+                                                    <span class="box"></span>
+                                                    <span class="text">Musical</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <!-- Single Checkbox -->
+                                        <div class="form-group">
+                                            <div class="grey-checkbox">
+                                                <label>
+                                                    <input type="checkbox">
+                                                    <span class="box"></span>
+                                                    <span class="text">Mystery</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <!-- Single Checkbox -->
+                                        <div class="form-group">
+                                            <div class="grey-checkbox">
+                                                <label>
+                                                    <input type="checkbox">
+                                                    <span class="box"></span>
+                                                    <span class="text">Romance</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <!-- Single Checkbox -->
+                                        <div class="form-group">
+                                            <div class="grey-checkbox">
+                                                <label>
+                                                    <input type="checkbox">
+                                                    <span class="box"></span>
+                                                    <span class="text">Sci-Fi &amp; Fantasy</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <!-- Single Checkbox -->
+                                        <div class="form-group">
+                                            <div class="grey-checkbox">
+                                                <label>
+                                                    <input type="checkbox">
+                                                    <span class="box"></span>
+                                                    <span class="text">Sport</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <!-- Single Checkbox -->
+                                        <div class="form-group">
+                                            <div class="grey-checkbox">
+                                                <label>
+                                                    <input type="checkbox">
+                                                    <span class="box"></span>
+                                                    <span class="text">Stand-Up Comedy</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <!-- Single Checkbox -->
+                                        <div class="form-group">
+                                            <div class="grey-checkbox">
+                                                <label>
+                                                    <input type="checkbox">
+                                                    <span class="box"></span>
+                                                    <span class="text">Thriller</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <!-- Single Checkbox -->
+                                        <div class="form-group">
+                                            <div class="grey-checkbox">
+                                                <label>
+                                                    <input type="checkbox">
+                                                    <span class="box"></span>
+                                                    <span class="text">War</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <!-- Single Checkbox -->
+                                        <div class="form-group">
+                                            <div class="grey-checkbox">
+                                                <label>
+                                                    <input type="checkbox">
+                                                    <span class="box"></span>
+                                                    <span class="text">Western</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <!-- /Single Checkbox -->
+                                    </div>
+                                    <!-- /Checkbox Section -->
+                                    
+                                    <!-- Year Range -->
+                                    <div class="year_scale" id="rounding_based">
+                                        <div class="year_title">
+                                            <p>Year</p>
+                                        </div>
+                                        <div class="year_range">
+                                            <div data-cur_max="2016" data-cur_min="0" data-range_max="2016" data-range_min="0" class="nstSlider">
+                                                <div class="bar"></div>
+                                                <div class="leftGrip"></div>
+                                                <div class="rightGrip"></div>
+                                            </div>
+                                            <div class="range_score">
+                                                <div class="leftLabel"> </div>
+                                                <div class="rightLabel"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /Year Range -->
+                                    
+                                    <!-- IMBD Rating -->
+                                    <div class="imbd_score" id="rounding_based_two">
+                                        <div class="year_title">
+                                            <p>IMDB Score</p>
+                                        </div>
+                                        <div class="year_range">
+                                            <div data-cur_max="10" data-cur_min="0" data-range_max="10" data-range_min="0" class="nstSlider">
+                                                <div class="bar"></div>
+                                                <div class="leftGrip"></div>
+                                                <div class="rightGrip"></div>
+                                            </div>
+                                            <div class="range_score">
+                                                <div class="leftLabel"> </div>
+                                                <div class="rightLabel"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /IMBD Rating -->
+                                    
+                                    <!-- Filter Submit button -->
+                                    <div class="submit_button">
+                                        <input type="submit" value="Apply Filters">
+                                        <input type="reset" value="Reset">
+                                    </div>
+                                    <!-- /Filter Submit button -->
+                                    
+                                </form>
+                                <!-- End Filters Form -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Scroll To Top -->
+            <div class="go_to_top">
+                <a href="#toTop" id="toTop">Go to Top <span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span></a>
+            </div>
+            
+        </div>
+        <!-- /Right Side Filters -->
+    </div>
+    <!-- /Content Area -->   
+       
+    </body>
+</html>
+
+
+
