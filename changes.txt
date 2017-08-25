@@ -1,0 +1,4 @@
+1- change slider size in main page to fit in mobile screens.
+2- remote jquery matchHeight library
+3- remove jquery scroll to top library
+4- 

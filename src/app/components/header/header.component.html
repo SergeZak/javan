@@ -1,0 +1,68 @@
+<!-- Header Area -->
+<div class="header_bar" id="header_bar">
+  <!-- Header Left Logo -->
+  <div class="header_left">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12">
+          <!-- Logo -->
+          <a routerLink="" title="JavanVideo" class="javanvideo">JAVANVIDEO</a>
+          <!-- Mobile Menu Button -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /Header Left Logo -->
+
+  <!-- Header Right -->
+  <div class="header_right">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Search box -->
+        <div class="col-sm-4 col-md-5">
+          <div class="search_box">
+            <form action="search-results.php">
+              <input type="text" placeholder="Search here">
+              <input type="submit" value="">
+            </form>
+          </div>
+        </div>
+
+        <!-- Main Menu -->
+        <div class="col-sm-8 col-md-7">
+          <div class="social_icon">
+            <ul>
+              <li>
+                <a href="#" title="Facebook"><img width="20" src="./assets/images/facebook.png" alt="Facebook"></a>
+              </li>
+              <li>
+                <a href="#" title="Twitter"><img width="20" src="./assets/images/twitter.png" alt="Twitter"></a>
+              </li>
+            </ul>
+          </div>
+          <div class="mainmenu_area">
+            <div class="mainmenu navbar-collapse collapse">
+              <ul class="nav navbar-nav navbar-right">
+                <li routerLinkActive="active"><a href="/live" title="Live TV">Live TV</a></li>
+                <li routerLinkActive="active"><a href="/tv-shows" title="TV Shows">TV Shows</a></li>
+                <li routerLinkActive="active"><a routerLink="/movies" title="Movies">Movies</a></li>
+                <li routerLinkActive="active"><a href="/series" title="Series">Series</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- /Header Right -->
+</div>
+<!-- /Header Area -->

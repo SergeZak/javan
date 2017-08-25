@@ -1,0 +1,385 @@
+<!-- Content Area -->
+<div class="content_area">
+  <!-- Left Side Movies List -->
+  <div class="content_left">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12 content_height">
+          <div class="movies_list">
+
+            <div class="row">
+              <div class="col-xs-8 single_item">
+                <div class="page_title">
+                  <h2>Movies</h2>
+                  <p>The popcorns are ready? Just left choose your serial</p>
+                </div>
+              </div>
+              <div class="col-xs-4 single_item">
+                <div class="sort_by alignright">
+                  <select name="sortby_list" id="sortby_list">
+                                            <option value="null" disabled selected>Sort</option>
+                                            <option value="1">Name (A-Z)</option>
+                                            <option value="2">Name (Z-A)</option>
+                                            <option value="3">Date Added</option>
+                                        </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Movies List -->
+            <div class="row">
+              <!-- Single Movie -->
+              <div class="col-lg-2 col-sm-4 col-md-3 col-xs-6 single_item" *ngFor="let movie of Movies;let i = index">
+                <div class="single_movie">
+                  <a href="movies-view.html" [title]="movie.title">
+                    <div class="movie_image">
+                      <img class="img-responsive" [src]="movie.url" alt="Movie Poster">
+                      <div class="hover_display"><img alt="" src="./assets/images/hover-icon.png"></div>
+                    </div>
+                    <div class="year_rating">
+                      <h5 class="year">{{ movie.release | date : 'yyyy'}}</h5>
+                      <h4 class="rating">
+                        <span><img width="10" src="./assets/images/rating.png" alt="Rating"></span> {{movie.imdbScore}}
+                      </h4>
+                    </div>
+                    <div class="title_type">
+                      <h3>{{movie.title}}</h3>
+                      <p><span *ngFor="let genre of movie.genres;let i = index;let lastRepeat = last">{{genre}}<span *ngIf="!lastRepeat">,&nbsp;</span></span>
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <!-- /Single Movie -->
+            </div>
+
+            <!-- /Movies List -->
+
+            <!-- Pagination Area -->
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="pagination_area">
+                  <div class="pagination_number">
+                    <ul class="pagination">
+                      <li class="previous disabled">
+                        <a href="#">
+                          <span class="glyphicon glyphicon-triangle-left" aria-hidden="true"></span> Previous
+                        </a>
+                      </li>
+                      <li class="active"><a href="#">1</a></li>
+                      <li><a href="#">2</a></li>
+                      <li><a href="#">3</a></li>
+                      <li><a href="#">4</a></li>
+                      <li><a href="#">...</a></li>
+                      <li><a href="#">174</a></li>
+                      <li class="next">
+                        <a href="#">Next <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /Pagination Area -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /Left Side Movies List -->
+
+
+  <!-- Right Side Filters -->
+
+  <!-- Star Filters Form -->
+  <app-slide-menu [title]="'Filters'" [description]="totalResult + ' Results'" [slide_height]="'1986px'">
+    <form>
+      <p>Genres</p>
+      <!-- Checkbox Section -->
+      <div class="checkbox_section">
+        <!-- Single Checkbox -->
+        <div class="form-group">
+          <div class="grey-checkbox">
+            <label>
+                                                    <input type="checkbox">
+                                                    <span class="box"></span>
+                                                    <span class="text">Action</span>
+                                                </label>
+          </div>
+        </div>
+        <!-- Single Checkbox -->
+        <div class="form-group">
+          <div class="grey-checkbox">
+            <label>
+                                                    <input type="checkbox">
+                                                    <span class="box"></span>
+                                                    <span class="text">Adult</span>
+                                                </label>
+          </div>
+        </div>
+        <!-- Single Checkbox -->
+        <div class="form-group">
+          <div class="grey-checkbox">
+            <label>
+                                                    <input type="checkbox">
+                                                    <span class="box"></span>
+                                                    <span class="text">Adventure</span>
+                                                </label>
+          </div>
+        </div>
+        <!-- Single Checkbox -->
+        <div class="form-group">
+          <div class="grey-checkbox">
+            <label>
+                                                    <input type="checkbox">
+                                                    <span class="box"></span>
+                                                    <span class="text">Animation</span>
+                                                </label>
+          </div>
+        </div>
+        <!-- Single Checkbox -->
+        <div class="form-group">
+          <div class="grey-checkbox">
+            <label>
+                                                    <input type="checkbox">
+                                                    <span class="box"></span>
+                                                    <span class="text">Biography</span>
+                                                </label>
+          </div>
+        </div>
+        <!-- Single Checkbox -->
+        <div class="form-group">
+          <div class="grey-checkbox">
+            <label>
+                                                    <input type="checkbox">
+                                                    <span class="box"></span>
+                                                    <span class="text">Comedy</span>
+                                                </label>
+          </div>
+        </div>
+        <!-- Single Checkbox -->
+        <div class="form-group">
+          <div class="grey-checkbox">
+            <label>
+                                                    <input type="checkbox">
+                                                    <span class="box"></span>
+                                                    <span class="text">Crime</span>
+                                                </label>
+          </div>
+        </div>
+        <!-- Single Checkbox -->
+        <div class="form-group">
+          <div class="grey-checkbox">
+            <label>
+                                                    <input type="checkbox">
+                                                    <span class="box"></span>
+                                                    <span class="text">Documentary</span>
+                                                </label>
+          </div>
+        </div>
+        <!-- Single Checkbox -->
+        <div class="form-group">
+          <div class="grey-checkbox">
+            <label>
+                                                    <input type="checkbox">
+                                                    <span class="box"></span>
+                                                    <span class="text">Drama</span>
+                                                </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="grey-checkbox">
+            <label>
+                                                    <input type="checkbox">
+                                                    <span class="box"></span>
+                                                    <span class="text">Family</span>
+                                                </label>
+          </div>
+        </div>
+        <!-- Single Checkbox -->
+        <div class="form-group">
+          <div class="grey-checkbox">
+            <label>
+                                                    <input type="checkbox">
+                                                    <span class="box"></span>
+                                                    <span class="text">Film-Noir</span>
+                                                </label>
+          </div>
+        </div>
+        <!-- Single Checkbox -->
+        <div class="form-group">
+          <div class="grey-checkbox">
+            <label>
+                                                    <input type="checkbox">
+                                                    <span class="box"></span>
+                                                    <span class="text">History</span>
+                                                </label>
+          </div>
+        </div>
+        <!-- Single Checkbox -->
+        <div class="form-group">
+          <div class="grey-checkbox">
+            <label>
+                                                    <input type="checkbox">
+                                                    <span class="box"></span>
+                                                    <span class="text">Horror</span>
+                                                </label>
+          </div>
+        </div>
+        <!-- Single Checkbox -->
+        <div class="form-group">
+          <div class="grey-checkbox">
+            <label>
+                                                    <input type="checkbox">
+                                                    <span class="box"></span>
+                                                    <span class="text">Music</span>
+                                                </label>
+          </div>
+        </div>
+        <!-- Single Checkbox -->
+        <div class="form-group">
+          <div class="grey-checkbox">
+            <label>
+                                                    <input type="checkbox">
+                                                    <span class="box"></span>
+                                                    <span class="text">Musical</span>
+                                                </label>
+          </div>
+        </div>
+        <!-- Single Checkbox -->
+        <div class="form-group">
+          <div class="grey-checkbox">
+            <label>
+                                                    <input type="checkbox">
+                                                    <span class="box"></span>
+                                                    <span class="text">Mystery</span>
+                                                </label>
+          </div>
+        </div>
+        <!-- Single Checkbox -->
+        <div class="form-group">
+          <div class="grey-checkbox">
+            <label>
+                                                    <input type="checkbox">
+                                                    <span class="box"></span>
+                                                    <span class="text">Romance</span>
+                                                </label>
+          </div>
+        </div>
+        <!-- Single Checkbox -->
+        <div class="form-group">
+          <div class="grey-checkbox">
+            <label>
+                                                    <input type="checkbox">
+                                                    <span class="box"></span>
+                                                    <span class="text">Sci-Fi &amp; Fantasy</span>
+                                                </label>
+          </div>
+        </div>
+        <!-- Single Checkbox -->
+        <div class="form-group">
+          <div class="grey-checkbox">
+            <label>
+                                                    <input type="checkbox">
+                                                    <span class="box"></span>
+                                                    <span class="text">Sport</span>
+                                                </label>
+          </div>
+        </div>
+        <!-- Single Checkbox -->
+        <div class="form-group">
+          <div class="grey-checkbox">
+            <label>
+                                                    <input type="checkbox">
+                                                    <span class="box"></span>
+                                                    <span class="text">Stand-Up Comedy</span>
+                                                </label>
+          </div>
+        </div>
+        <!-- Single Checkbox -->
+        <div class="form-group">
+          <div class="grey-checkbox">
+            <label>
+                                                    <input type="checkbox">
+                                                    <span class="box"></span>
+                                                    <span class="text">Thriller</span>
+                                                </label>
+          </div>
+        </div>
+        <!-- Single Checkbox -->
+        <div class="form-group">
+          <div class="grey-checkbox">
+            <label>
+                                                    <input type="checkbox">
+                                                    <span class="box"></span>
+                                                    <span class="text">War</span>
+                                                </label>
+          </div>
+        </div>
+        <!-- Single Checkbox -->
+        <div class="form-group">
+          <div class="grey-checkbox">
+            <label>
+                                                    <input type="checkbox">
+                                                    <span class="box"></span>
+                                                    <span class="text">Western</span>
+                                                </label>
+          </div>
+        </div>
+        <!-- /Single Checkbox -->
+      </div>
+      <!-- /Checkbox Section -->
+
+      <!-- Year Range -->
+      <div class="year_scale" id="rounding_based">
+        <div class="year_title">
+          <p>Year</p>
+        </div>
+        <div class="year_range">
+          <div data-cur_max="2016" data-cur_min="0" data-range_max="2016" data-range_min="0" class="nstSlider">
+            <div class="bar"></div>
+            <div class="leftGrip"></div>
+            <div class="rightGrip"></div>
+          </div>
+          <div class="range_score">
+            <div class="leftLabel"> </div>
+            <div class="rightLabel"></div>
+          </div>
+        </div>
+      </div>
+      <!-- /Year Range -->
+
+      <!-- IMBD Rating -->
+      <div class="imbd_score" id="rounding_based_two">
+        <div class="year_title">
+          <p>IMDB Score</p>
+        </div>
+        <div class="year_range">
+          <div data-cur_max="10" data-cur_min="0" data-range_max="10" data-range_min="0" class="nstSlider">
+            <div class="bar"></div>
+            <div class="leftGrip"></div>
+            <div class="rightGrip"></div>
+          </div>
+          <div class="range_score">
+            <div class="leftLabel"> </div>
+            <div class="rightLabel"></div>
+          </div>
+        </div>
+      </div>
+      <!-- /IMBD Rating -->
+
+      <!-- Filter Submit button -->
+      <div class="submit_button">
+        <input type="submit" value="Apply Filters">
+        <input type="reset" value="Reset">
+      </div>
+      <!-- /Filter Submit button -->
+
+    </form>
+  </app-slide-menu>
+  <!-- End Filters Form -->
+
+  <!-- /Right Side Filters -->
+</div>
+<!-- /Content Area -->

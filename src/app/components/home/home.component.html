@@ -1,0 +1,680 @@
+<!-- Content Area -->
+<div class="content_area">
+  <!-- Left Side Movies List -->
+  <div class="content_left">
+    <div class="container-fluid">
+
+      <div class="row">
+        <div class="col-sm-12 content_height">
+          <div class="movies_list home-page">
+
+            <div class="row">
+              <div class="col-sm-12 single_item">
+                <div class="slider_area">
+                  <div id="fawesome-carousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                      <li data-target="#fawesome-carousel" data-slide-to="0" class="active"></li>
+                      <li data-target="#fawesome-carousel" data-slide-to="1"></li>
+                      <li data-target="#fawesome-carousel" data-slide-to="2"></li>
+                    </ol>
+
+                    <div class="carousel-inner" role="listbox">
+                      <div class="item active">
+                        <div class="single_slider">
+                          <img src="./assets/images/slider1.jpg" alt="">
+                          <div class="slider_title_tag">
+                            <a href="#">
+                              <h2>New Season is here</h2>
+                              <p>Dont loose any episode of the new 4th Arrow season</p>
+                              <span class="link_icon"><img width="16" src="./assets/images/slider-link.png" alt=""></span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="single_slider">
+                          <img src="./assets/images/slider1.jpg" alt="">
+                          <div class="slider_title_tag">
+                            <a href="#">
+                              <h2>New Season is here</h2>
+                              <p>Dont loose any episode of the new 4th Arrow season</p>
+                              <span class="link_icon"><img width="16" src="./assets/images/slider-link.png" alt=""></span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="single_slider">
+                          <img src="./assets/images/slider1.jpg" alt="">
+                          <div class="slider_title_tag">
+                            <a href="#">
+                              <h2>New Season is here</h2>
+                              <p>Dont loose any episode of the new 4th Arrow season</p>
+                              <span class="link_icon"><img width="16" src="./assets/images/slider-link.png" alt=""></span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="next_previous">
+                      <a class="left fawesome-control" href="#fawesome-carousel" role="button" data-slide="prev"><i class="fa fa-angle-left"></i></a>
+                      <a class="right fawesome-control" href="#fawesome-carousel" role="button" data-slide="next"><i class="fa fa-angle-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-8 single_item">
+                <div class="page_title">
+                  <h2>Series</h2>
+                  <p>Views our last videos in Serie section</p>
+                </div>
+              </div>
+              <div class="col-xs-4 single_item">
+                <div class="sort_by alignright">
+                  <a href="#" title="View All" class="view_all">View All</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Movies List -->
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="movies_poster_area">
+                  <div class="movies_poster_section">
+                    <ul class="movie_poster_lists">
+
+                      <li class="single_movie_poster_list" *ngFor="let serial of Series;let i = index">
+                        <a href="#" [title]="serial.title">
+                          <span class="movie_quality"></span>
+                          <img class="movie_poster_img" [src]="serial.url" [alt]="serial.title">
+                          <!--[src]="getImage(movie.previewImage,$element)"-->
+                          <div class="hover_display">
+                            <img src="./assets/images/hover-icon.png" alt="">
+                            <h4>{{serial.title}}</h4>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /Movies List -->
+
+
+
+
+            <!-- ========================================================
+   Section Title | Movies Section 
+==========================================================-->
+            <div class="row">
+              <div class="col-xs-8 single_item">
+                <div class="page_title">
+                  <h2>Movies</h2>
+                  <p>Views our last videos in movie section</p>
+                </div>
+              </div>
+              <div class="col-xs-4 single_item">
+                <div class="sort_by alignright">
+                  <a href="movies.html" title="View All" class="view_all">View All</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Movies List -->
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="movies_poster_area">
+                  <div class="movies_poster_section">
+                    <ul class="movie_poster_lists">
+                      <li class="single_movie_poster_list" *ngFor="let movie of Movies;let i = index">
+                        <a href="#" [title]="movie.title">
+                          <span class="movie_quality"></span>
+                          <img class="movie_poster_img" [src]="movie.url" [alt]="movie.title">
+                          <!--[src]="getImage(movie.previewImage,$element)"-->
+                          <div class="hover_display">
+                            <img src="./assets/images/hover-icon.png" alt="">
+                            <h4>{{movie.title}}</h4>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /Movies List -->
+
+
+
+
+
+            <!-- ========================================================
+   Section Title | TV Shows Section 
+==========================================================-->
+            <div class="row">
+              <div class="col-xs-8 single_item">
+                <div class="page_title">
+                  <h2>TV Shows</h2>
+                  <p>Views our last videos in TV SHows section</p>
+                </div>
+              </div>
+              <div class="col-xs-4 single_item">
+                <div class="sort_by alignright">
+                  <a href="#" title="View All" class="view_all">View All</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Movies List -->
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="movies_poster_area">
+                  <div class="movies_poster_section tv_show">
+                    <ul class="movie_poster_lists">
+                      <li class="single_movie_poster_list" *ngFor="let show of Shows;let i = index">
+                        <a href="#" [title]="show.title">
+                          <span class="movie_quality"></span>
+                          <img class="movie_poster_img" [src]="show.url" [alt]="show.title">
+                          <!--[src]="getImage(movie.previewImage,$element)"-->
+                          <div class="hover_display">
+                            <img src="./assets/images/hover-icon.png" alt="">
+                            <h4>{{show.title}}</h4>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /Movies List -->
+
+
+
+            <!-- ========================================================
+   Section Title | Live TV Section 
+==========================================================-->
+            <div class="row">
+              <div class="col-xs-8 single_item">
+                <div class="page_title">
+                  <h2>Live TV</h2>
+                  <p>Views our Live Channels</p>
+                </div>
+              </div>
+              <div class="col-xs-4 single_item">
+                <div class="sort_by alignright">
+                  <a href="movie-list.html" title="View All" class="view_all">View All</a>
+                </div>
+              </div>
+            </div>
+
+            <!--<div class="row">
+              <div class="col-sm-12">
+                <div class="live_tv_section">
+                  <div class="live_tv_carousel">
+                    <owl-carousel [options]="{items: 10, dots: false, navigation: false}">
+                      <div class="item" *ngFor="let item of liveTvList;let i = index">
+                        <div class="livetv_table">
+                          <div class="livetv_tablecell">
+                            <a href="#" title="CBS Reality">
+                              <img width="82" [src]="item.image" alt="CBS Reality">
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </owl-carousel>
+                  </div>
+                </div>
+              </div>
+            </div>-->
+
+
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="live_tv_section">
+                  <div class="live_tv_carousel">
+
+                    <div class="item">
+                      <div class="livetv_table">
+                        <div class="livetv_tablecell">
+                          <a href="#" title="CBS Reality">
+                            <img width="82" src="./assets/images/cbs-reality.png" alt="CBS Reality">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="livetv_table">
+                        <div class="livetv_tablecell">
+                          <a href="#" title="MCS Extreme">
+                            <img width="91" src="./assets/images/mcs.png" alt="MCS Extreme">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="livetv_table">
+                        <div class="livetv_tablecell">
+                          <a href="#" title="MCS Lifestyle">
+                            <img width="95" src="./assets/images/mcs-lifestyle.png" alt="MCS Lifestyle">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="livetv_table">
+                        <div class="livetv_tablecell">
+                          <a href="#" title="Travel Channel">
+                            <img width="97" src="./assets/images/travel.png" alt="Travel Channel">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="livetv_table">
+                        <div class="livetv_tablecell">
+                          <a href="#" title="DiscoveryHD Showcase">
+                            <img width="106" src="./assets/images/discoveryhd.png" alt="DiscoveryHD Showcase">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="livetv_table">
+                        <div class="livetv_tablecell">
+                          <a href="#" title="CBS Reality">
+                            <img width="82" src="./assets/images/cbs-reality.png" alt="CBS Reality">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="livetv_table">
+                        <div class="livetv_tablecell">
+                          <a href="#" title="MCS Extreme">
+                            <img width="91" src="./assets/images/mcs.png" alt="MCS Extreme">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="livetv_table">
+                        <div class="livetv_tablecell">
+                          <a href="#" title="MCS Lifestyle">
+                            <img width="95" src="./assets/images/mcs-lifestyle.png" alt="MCS Lifestyle">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="livetv_table">
+                        <div class="livetv_tablecell">
+                          <a href="#" title="Travel Channel">
+                            <img width="97" src="./assets/images/travel.png" alt="Travel Channel">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="livetv_table">
+                        <div class="livetv_tablecell">
+                          <a href="#" title="DiscoveryHD Showcase">
+                            <img width="106" src="./assets/images/discoveryhd.png" alt="DiscoveryHD Showcase">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+
+
+            <!-- ================= Copyright Section ===================-->
+            <div class="row copyright_section">
+              <div class="col-sm-8 single_item">
+                <div class="copyright_text">
+                  <p>JAVANVIDEO {{thisYear}} © All rights Reserved.</p>
+                </div>
+              </div>
+              <div class="col-sm-4 single_item">
+                <div class="aixsystem_logo">
+                  <img width="95" src="./assets/images/aixsystem-logo.png" alt="">
+                </div>
+              </div>
+            </div>
+            <!-- ================= /Copyright Section ===================-->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /Left Side Movies List -->
+  <app-slide-menu [title]="'Newest videos'" [description]="'VIEW OUR LAST VIDEOS IN THE WEBSITE'" [slide_height]="'2540px'">
+    <ul class="newest_movie_list">
+      <li>
+        <a href="#">
+          <div class="single_movie_list">
+            <div class="movie_poster_thumb">
+              <img width="50" src="./assets/images/movie-thumb1.jpg" alt="">
+            </div>
+            <div class="movie_title_time">
+              <h4>Movies</h4>
+              <h3>Now You See Me 2</h3>
+              <p>added 2 days ago</p>
+            </div>
+          </div>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <div class="single_movie_list">
+            <div class="movie_poster_thumb">
+              <img width="50" src="./assets/images/movie-thumb2.jpg" alt="">
+            </div>
+            <div class="movie_title_time">
+              <h4>Movies</h4>
+              <h3>The Nice Guys</h3>
+              <p>added 3 days ago</p>
+            </div>
+          </div>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <div class="single_movie_list">
+            <div class="movie_poster_thumb">
+              <img width="50" src="./assets/images/movie-thumb3.jpg" alt="">
+            </div>
+            <div class="movie_title_time">
+              <h4>Movies</h4>
+              <h3>Schism <span class="has-season">Arrow - 4x23</span></h3>
+              <p>added 3 days ago</p>
+            </div>
+          </div>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <div class="single_movie_list">
+            <div class="movie_poster_thumb">
+              <img width="50" src="./assets/images/movie-thumb4.jpg" alt="">
+            </div>
+            <div class="movie_title_time">
+              <h4>Movies</h4>
+              <h3>Money Monster</h3>
+              <p>added 5 days ago</p>
+            </div>
+          </div>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <div class="single_movie_list">
+            <div class="movie_poster_thumb">
+              <img width="50" src="./assets/images/movie-thumb5.jpg" alt="">
+            </div>
+            <div class="movie_title_time">
+              <h4>Movies</h4>
+              <h3>Deadpool</h3>
+              <p>added 7 days ago</p>
+            </div>
+          </div>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <div class="single_movie_list">
+            <div class="movie_poster_thumb">
+              <img width="50" src="./assets/images/movie-thumb3.jpg" alt="">
+            </div>
+            <div class="movie_title_time">
+              <h4>Movies</h4>
+              <h3>Now You See Me 2</h3>
+              <p>added 2 days ago</p>
+            </div>
+          </div>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <div class="single_movie_list">
+            <div class="movie_poster_thumb">
+              <img width="50" src="./assets/images/movie-thumb1.jpg" alt="">
+            </div>
+            <div class="movie_title_time">
+              <h4>Movies</h4>
+              <h3>Now You See Me 2</h3>
+              <p>added 2 days ago</p>
+            </div>
+          </div>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <div class="single_movie_list">
+            <div class="movie_poster_thumb">
+              <img width="50" src="./assets/images/movie-thumb2.jpg" alt="">
+            </div>
+            <div class="movie_title_time">
+              <h4>Movies</h4>
+              <h3>The Nice Guys</h3>
+              <p>added 3 days ago</p>
+            </div>
+          </div>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <div class="single_movie_list">
+            <div class="movie_poster_thumb">
+              <img width="50" src="./assets/images/movie-thumb3.jpg" alt="">
+            </div>
+            <div class="movie_title_time">
+              <h4>Movies</h4>
+              <h3>Schism <span class="has-season">Arrow - 4x23</span></h3>
+              <p>added 3 days ago</p>
+            </div>
+          </div>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <div class="single_movie_list">
+            <div class="movie_poster_thumb">
+              <img width="50" src="./assets/images/movie-thumb4.jpg" alt="">
+            </div>
+            <div class="movie_title_time">
+              <h4>Movies</h4>
+              <h3>Money Monster</h3>
+              <p>added 5 days ago</p>
+            </div>
+          </div>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <div class="single_movie_list">
+            <div class="movie_poster_thumb">
+              <img width="50" src="./assets/images/movie-thumb5.jpg" alt="">
+            </div>
+            <div class="movie_title_time">
+              <h4>Movies</h4>
+              <h3>Deadpool</h3>
+              <p>added 7 days ago</p>
+            </div>
+          </div>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <div class="single_movie_list">
+            <div class="movie_poster_thumb">
+              <img width="50" src="./assets/images/movie-thumb3.jpg" alt="">
+            </div>
+            <div class="movie_title_time">
+              <h4>Movies</h4>
+              <h3>Now You See Me 2</h3>
+              <p>added 2 days ago</p>
+            </div>
+          </div>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <div class="single_movie_list">
+            <div class="movie_poster_thumb">
+              <img width="50" src="./assets/images/movie-thumb1.jpg" alt="">
+            </div>
+            <div class="movie_title_time">
+              <h4>Movies</h4>
+              <h3>Now You See Me 2</h3>
+              <p>added 2 days ago</p>
+            </div>
+          </div>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <div class="single_movie_list">
+            <div class="movie_poster_thumb">
+              <img width="50" src="./assets/images/movie-thumb2.jpg" alt="">
+            </div>
+            <div class="movie_title_time">
+              <h4>Movies</h4>
+              <h3>The Nice Guys</h3>
+              <p>added 3 days ago</p>
+            </div>
+          </div>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <div class="single_movie_list">
+            <div class="movie_poster_thumb">
+              <img width="50" src="./assets/images/movie-thumb3.jpg" alt="">
+            </div>
+            <div class="movie_title_time">
+              <h4>Movies</h4>
+              <h3>Schism <span class="has-season">Arrow - 4x23</span></h3>
+              <p>added 3 days ago</p>
+            </div>
+          </div>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <div class="single_movie_list">
+            <div class="movie_poster_thumb">
+              <img width="50" src="./assets/images/movie-thumb4.jpg" alt="">
+            </div>
+            <div class="movie_title_time">
+              <h4>Movies</h4>
+              <h3>Money Monster</h3>
+              <p>added 5 days ago</p>
+            </div>
+          </div>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <div class="single_movie_list">
+            <div class="movie_poster_thumb">
+              <img width="50" src="./assets/images/movie-thumb5.jpg" alt="">
+            </div>
+            <div class="movie_title_time">
+              <h4>Movies</h4>
+              <h3>Deadpool</h3>
+              <p>added 7 days ago</p>
+            </div>
+          </div>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <div class="single_movie_list">
+            <div class="movie_poster_thumb">
+              <img width="50" src="./assets/images/movie-thumb3.jpg" alt="">
+            </div>
+            <div class="movie_title_time">
+              <h4>Movies</h4>
+              <h3>Now You See Me 2</h3>
+              <p>added 2 days ago</p>
+            </div>
+          </div>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <div class="single_movie_list">
+            <div class="movie_poster_thumb">
+              <img width="50" src="./assets/images/movie-thumb5.jpg" alt="">
+            </div>
+            <div class="movie_title_time">
+              <h4>Movies</h4>
+              <h3>Deadpool</h3>
+              <p>added 7 days ago</p>
+            </div>
+          </div>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <div class="single_movie_list">
+            <div class="movie_poster_thumb">
+              <img width="50" src="./assets/images/movie-thumb3.jpg" alt="">
+            </div>
+            <div class="movie_title_time">
+              <h4>Movies</h4>
+              <h3>Now You See Me 2</h3>
+              <p>added 2 days ago</p>
+            </div>
+          </div>
+        </a>
+      </li>
+
+    </ul>
+  </app-slide-menu>
+</div>
+<!-- /Content Area -->
