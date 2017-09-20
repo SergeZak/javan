@@ -1,5 +1,8 @@
 import { Component, OnInit, AfterViewInit, OnDestroy } from '@angular/core';
 import { VideoApiService } from '../../services/video-api.service';
+import {MovieService} from "../../services/movie.service";
+
+declare var $: any;
 
 @Component({
   selector: 'app-movies',
@@ -8,12 +11,15 @@ import { VideoApiService } from '../../services/video-api.service';
 })
 export class MoviesComponent implements OnInit, AfterViewInit, OnDestroy {
   private req: any;
-  private Movies: [any];
+  private Movies: any;
   private imgReq: any;
   private dateNow: Date;
   private totalResult: string;
 
-  constructor(private _api: VideoApiService) {
+  constructor(
+    private _api: VideoApiService,
+    public movieService: MovieService
+  ) {
     this.dateNow = new Date();
     this.totalResult = '??';
   }
@@ -23,7 +29,7 @@ export class MoviesComponent implements OnInit, AfterViewInit, OnDestroy {
       $(".text").css("color", "#fff");
     });
 
-    $('#rounding_based').find('.nstSlider').nstSlider({
+    <any>$('#rounding_based').find('.nstSlider').nstSlider({
       "rounding": {
         "1": "1900",
         "10": "1910",
@@ -39,7 +45,7 @@ export class MoviesComponent implements OnInit, AfterViewInit, OnDestroy {
       }
     });
 
-    $('#rounding_based_two').find('.nstSlider').nstSlider({
+    <any>$('#rounding_based_two').find('.nstSlider').nstSlider({
       "rounding": {
         "1": "10",
         "10": "10",
@@ -57,28 +63,14 @@ export class MoviesComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.req = this._api.getAllMovies().subscribe(res => {
-      //console.log(res);
-      this.Movies = res.content;
-      this.totalResult = res.totalElements;
-      if (this.totalResult)
-        this.Movies.forEach(element => {
-          this.getImage(element.previewImage, element);
-        });
-    });
+    this.req = this.movieService.getMovieList()
+        .subscribe(movies => {
+            this.Movies = movies;
+        })
 
-  }
-
-  private getImage(imageId, element): void {
-    element.url = 'http://localhost:4200/assets/images/placeHolder.png';
-    this.imgReq = this._api.getImageUrl(imageId).subscribe(url => {
-      element.url = url;
-    });
   }
 
   ngOnDestroy(): void {
-    this.req.unsubscribe();
-    if (this.imgReq)
-      this.imgReq.unsubscribe();
+      this.req.unsubscribe();
   }
 }

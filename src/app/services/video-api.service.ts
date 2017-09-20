@@ -55,7 +55,7 @@ export class VideoApiService {
     }
 
     public getImageUrl(imageId: string): Observable<any> {
-        var defaultUrl = 'http://localhost:4200/assets/images/placeHolder.png';
+
         return this._http.get(this._consts.APIs.Images.GetImage + imageId, { responseType: ResponseContentType.Blob })
             .map(res => {
                 var urlCreator = window.URL;

@@ -1,5 +1,6 @@
 export class Consts {
-    EndPoint: string = 'http://139.59.164.38:7070/';
+    // EndPoint: string = 'http://139.59.164.38:7070/';
+    EndPoint: string = 'http://api.beta.javanvideo.com/';
     APIs: any = {
         'Movies': {
             'GetAll': this.EndPoint + 'movies'

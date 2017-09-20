@@ -1,6 +1,7 @@
 import { Component, OnInit, AfterViewInit, OnDestroy } from '@angular/core';
 import { VideoApiService } from '../../services/video-api.service';
 
+declare var $: any;
 
 @Component({
   selector: 'app-tv-shows',
@@ -24,7 +25,7 @@ export class TvShowsComponent implements OnInit {
       $(".text").css("color", "#fff");
     });
 
-    $('#rounding_based').find('.nstSlider').nstSlider({
+    <any>$('#rounding_based').find('.nstSlider').nstSlider({
       "rounding": {
         "1": "1900",
         "10": "1910",
@@ -40,7 +41,7 @@ export class TvShowsComponent implements OnInit {
       }
     });
 
-    $('#rounding_based_two').find('.nstSlider').nstSlider({
+    <any>$('#rounding_based_two').find('.nstSlider').nstSlider({
       "rounding": {
         "1": "10",
         "10": "10",
@@ -78,8 +79,8 @@ export class TvShowsComponent implements OnInit {
   }
 
   ngOnDestroy(): void {
-    this.req.unsubscribe();
-    if (this.imgReq)
-      this.imgReq.unsubscribe();
+    // this.req.unsubscribe();
+    // if (this.imgReq)
+    //   this.imgReq.unsubscribe();
   }
 }

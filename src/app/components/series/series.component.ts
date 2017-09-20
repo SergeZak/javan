@@ -1,6 +1,8 @@
 import { Component, OnInit, AfterViewInit, OnDestroy } from '@angular/core';
 import { VideoApiService } from '../../services/video-api.service';
 
+declare var $: any;
+
 @Component({
   selector: 'app-series',
   templateUrl: './series.component.html',
@@ -21,7 +23,7 @@ export class SeriesComponent implements OnInit {
       $(".text").css("color", "#fff");
     });
 
-    $('#rounding_based').find('.nstSlider').nstSlider({
+    <any>$('#rounding_based').find('.nstSlider').nstSlider({
       "rounding": {
         "1": "1900",
         "10": "1910",
@@ -37,7 +39,7 @@ export class SeriesComponent implements OnInit {
       }
     });
 
-    $('#rounding_based_two').find('.nstSlider').nstSlider({
+    <any>$('#rounding_based_two').find('.nstSlider').nstSlider({
       "rounding": {
         "1": "10",
         "10": "10",

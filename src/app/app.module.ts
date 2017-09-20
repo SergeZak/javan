@@ -28,6 +28,7 @@ import { ViewSeriesComponent } from './components/series/view-series/view-series
 import { SeriesIntroComponent } from './components/series/series-intro/series-intro.component';
 import { TvShowsComponent } from './components/tv-shows/tv-shows.component';
 import { LiveTvComponent } from './components/live-tv/live-tv.component';
+import {MovieService} from "./services/movie.service";
 
 @NgModule({
   declarations: [
@@ -53,7 +54,14 @@ import { LiveTvComponent } from './components/live-tv/live-tv.component';
 
     RouterModule.forRoot(appRoutes),
   ],
-  providers: [SlideMenuConfigService, VideoApiService, Consts],
+
+  providers: [
+    SlideMenuConfigService,
+    VideoApiService,
+    Consts,
+    MovieService
+  ],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

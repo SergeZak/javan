@@ -3,6 +3,7 @@ import { Response } from '@angular/http';
 import { DomSanitizer } from '@angular/platform-browser';
 import { SlideMenuConfigService } from '../../services/slide-menu-config.service';
 import { VideoApiService } from '../../services/video-api.service';
+import {MovieService} from "../../services/movie.service";
 
 declare var $: any;
 
@@ -19,13 +20,19 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     seriesReq: any;
     showsReq: any;
     imgReq: any;
-    Movies: [any];
+    Movies: any;
     Series: [any];
     Shows: [any];
 
 
-    constructor(private _elementRef: ElementRef, private _menuService: SlideMenuConfigService,
-        private _api: VideoApiService, private _sanitizer: DomSanitizer) {
+    constructor(
+        private _elementRef: ElementRef,
+        private _menuService: SlideMenuConfigService,
+        private _api: VideoApiService,
+        private _sanitizer: DomSanitizer,
+        public movieService: MovieService
+    )
+    {
 
         this.liveTvList = [
             {
@@ -122,22 +129,23 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     ngOnInit() {
         this.biggestHeight = this._menuService.Height = this._elementRef.nativeElement.querySelector('.content_left').offsetHeight;
 
-        this.moviesReq = this._api.getAllMovies().subscribe(res => {
-            this.Movies = res.content;
-            this.Movies.forEach(element => {
-                this.getImage(element.previewImage, element);
+        this.moviesReq = this.movieService.getMovieList()
+            .subscribe(movies => {
+                this.Movies = movies;
             });
-        });
+
+
         this.seriesReq = this._api.getAllSeries().subscribe(res => {
             this.Series = res.content;
             this.Series.forEach(element => {
-                this.getImage(element.previewImage, element);
+                // this.getImage(element.previewImage, element);
             });
         });
+
         this.showsReq = this._api.getAllShows().subscribe(res => {
             this.Shows = res.content;
             this.Shows.forEach(element => {
-                this.getImage(element.previewImage, element);
+                // this.getImage(element.previewImage, element);
             });
         });
     }
@@ -148,9 +156,12 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
         //     var urlCreator = window.URL;
         //     element.url = this._sanitizer.bypassSecurityTrustUrl(urlCreator.createObjectURL(blobContent));;
         // });
-        this.imgReq = this._api.getImageUrl(imageId).subscribe(url => {
-            element.url = url;
-        });
+
+        element.url = imageId;
+
+        // this.imgReq = this._api.getImageUrl(imageId).subscribe(url => {
+        //     element.url = url;
+        // });
     }
 
 
@@ -158,6 +169,6 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
         this.moviesReq.unsubscribe();
         this.seriesReq.unsubscribe();
         this.showsReq.unsubscribe();
-        this.imgReq.unsubscribe();
+        // this.imgReq.unsubscribe();
     }
 }

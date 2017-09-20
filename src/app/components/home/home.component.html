@@ -109,7 +109,7 @@
 
 
             <!-- ========================================================
-   Section Title | Movies Section 
+   Section Title | Movies Section
 ==========================================================-->
             <div class="row">
               <div class="col-xs-8 single_item">
@@ -134,8 +134,8 @@
                       <li class="single_movie_poster_list" *ngFor="let movie of Movies;let i = index">
                         <a href="#" [title]="movie.title">
                           <span class="movie_quality"></span>
-                          <img class="movie_poster_img" [src]="movie.url" [alt]="movie.title">
-                          <!--[src]="getImage(movie.previewImage,$element)"-->
+                          <img class="movie_poster_img" [src]="movie.previewImage" [alt]="movie.title">
+
                           <div class="hover_display">
                             <img src="./assets/images/hover-icon.png" alt="">
                             <h4>{{movie.title}}</h4>
@@ -154,7 +154,7 @@
 
 
             <!-- ========================================================
-   Section Title | TV Shows Section 
+   Section Title | TV Shows Section
 ==========================================================-->
             <div class="row">
               <div class="col-xs-8 single_item">
@@ -197,7 +197,7 @@
 
 
             <!-- ========================================================
-   Section Title | Live TV Section 
+   Section Title | Live TV Section
 ==========================================================-->
             <div class="row">
               <div class="col-xs-8 single_item">
