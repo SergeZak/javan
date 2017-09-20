@@ -22,11 +22,6 @@ export class MovieService {
 
     getMovieList()
     {
-        if(this.movieList.length > 0)
-        {
-            return Observable.from([this.movieList]);
-        }
-
         return this.apiService.getAllMovies()
             .map(movies => {
                 this.movieList = movies.content;

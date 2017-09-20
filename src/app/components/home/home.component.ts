@@ -4,6 +4,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { SlideMenuConfigService } from '../../services/slide-menu-config.service';
 import { VideoApiService } from '../../services/video-api.service';
 import {MovieService} from "../../services/movie.service";
+import {SeriesService} from "../../services/series.service";
 
 declare var $: any;
 
@@ -20,9 +21,9 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     seriesReq: any;
     showsReq: any;
     imgReq: any;
-    Movies: any;
-    Series: [any];
-    Shows: [any];
+    Movies: any = [];
+    Series: any = [];
+    Shows: any = [];
 
 
     constructor(
@@ -30,7 +31,8 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
         private _menuService: SlideMenuConfigService,
         private _api: VideoApiService,
         private _sanitizer: DomSanitizer,
-        public movieService: MovieService
+        public movieService: MovieService,
+        public seriesService: SeriesService
     )
     {
 
@@ -134,13 +136,8 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
                 this.Movies = movies;
             });
 
-
-        this.seriesReq = this._api.getAllSeries().subscribe(res => {
-            this.Series = res.content;
-            this.Series.forEach(element => {
-                // this.getImage(element.previewImage, element);
-            });
-        });
+        this.seriesReq = this.seriesService.getSeriesList()
+            .subscribe(series => this.Series = series);
 
         this.showsReq = this._api.getAllShows().subscribe(res => {
             this.Shows = res.content;
@@ -151,13 +148,6 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     }
 
     private getImage(imageId, element): void {
-        element.url = 'http://localhost:4200/assets/images/placeHolder.png';
-        // this.imgReq = this._api.getImageUrl(imageId).subscribe(blobContent => {
-        //     var urlCreator = window.URL;
-        //     element.url = this._sanitizer.bypassSecurityTrustUrl(urlCreator.createObjectURL(blobContent));;
-        // });
-
-        element.url = imageId;
 
         // this.imgReq = this._api.getImageUrl(imageId).subscribe(url => {
         //     element.url = url;

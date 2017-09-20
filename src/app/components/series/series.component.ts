@@ -1,5 +1,6 @@
 import { Component, OnInit, AfterViewInit, OnDestroy } from '@angular/core';
 import { VideoApiService } from '../../services/video-api.service';
+import {SeriesService} from "../../services/series.service";
 
 declare var $: any;
 
@@ -14,7 +15,9 @@ export class SeriesComponent implements OnInit {
   private imgReq: any;
   private totalResult: string;
 
-  constructor(private _api: VideoApiService) {
+  constructor(
+    public seriesService: SeriesService
+  ) {
     this.totalResult = '??';
   }
 
@@ -56,28 +59,13 @@ export class SeriesComponent implements OnInit {
     });
   }
 
-  ngOnInit() {
-    this.req = this._api.getAllMovies().subscribe(res => {
-      //console.log(res);
-      this.Series = res.content;
-      this.totalResult = res.totalElements;
-      if (this.totalResult)
-        this.Series.forEach(element => {
-          this.getImage(element.previewImage, element);
-        });
-    });
-
-  }
-  private getImage(imageId, element): void {
-    element.url = 'http://localhost:4200/assets/images/placeHolder.png';
-    this.imgReq = this._api.getImageUrl(imageId).subscribe(url => {
-      element.url = url;
-    });
+  ngOnInit()
+  {
+    this.req = this.seriesService.getSeriesList()
+        .subscribe(series => this.Series = series)
   }
 
   ngOnDestroy(): void {
-    this.req.unsubscribe()
-    if (this.imgReq)
-      this.imgReq.unsubscribe();
+      this.req.unsubscribe()
   }
 }

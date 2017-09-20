@@ -90,7 +90,7 @@
                       <li class="single_movie_poster_list" *ngFor="let serial of Series;let i = index">
                         <a href="#" [title]="serial.title">
                           <span class="movie_quality"></span>
-                          <img class="movie_poster_img" [src]="serial.url" [alt]="serial.title">
+                          <img class="movie_poster_img" [src]="serial.previewImage" [alt]="serial.title">
                           <!--[src]="getImage(movie.previewImage,$element)"-->
                           <div class="hover_display">
                             <img src="./assets/images/hover-icon.png" alt="">

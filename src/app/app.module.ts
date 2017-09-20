@@ -29,6 +29,8 @@ import { SeriesIntroComponent } from './components/series/series-intro/series-in
 import { TvShowsComponent } from './components/tv-shows/tv-shows.component';
 import { LiveTvComponent } from './components/live-tv/live-tv.component';
 import {MovieService} from "./services/movie.service";
+import {SeriesService} from "./services/series.service";
+
 
 @NgModule({
   declarations: [
@@ -59,7 +61,8 @@ import {MovieService} from "./services/movie.service";
     SlideMenuConfigService,
     VideoApiService,
     Consts,
-    MovieService
+    MovieService,
+    SeriesService
   ],
 
   bootstrap: [AppComponent]

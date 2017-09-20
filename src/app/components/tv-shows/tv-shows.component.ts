@@ -79,8 +79,8 @@ export class TvShowsComponent implements OnInit {
   }
 
   ngOnDestroy(): void {
-    // this.req.unsubscribe();
-    // if (this.imgReq)
-    //   this.imgReq.unsubscribe();
+    this.req.unsubscribe();
+    if (this.imgReq)
+      this.imgReq.unsubscribe();
   }
 }
